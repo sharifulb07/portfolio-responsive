@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+
+  --color-background-color:#121212;
+  --color-text-color:#959595; 
+  --color-highlight-color:#FD6F00;
+  --color-border-color:#959595;
+  --color-round-shadow-color:##1b1b1b;
+  --color-service-card-background:#575757;
+  --color-service-card:#575757;
+  --color-card-title:#C6C6C6;
+
+
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body{
+background-color: var(--color-background-color);
+color: var(--color-text-color);
+}
+
+@layer utilities{
+  .button{
+    @apply px-10 text-[20px] text-white font-bold cursor-pointer  py-3 rounded-[8px] bg-gradient-to-r from-[#FD6F00] to-[#E46400]
   }
-}
+  .tracking-3percent {
+    letter-spacing: 3%;
+  }
+  .clip-triangle {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .circle-background{
+    fill: none;
+    stroke: #D9D9D9;
+  }
+  .circle-progress{
+    fill: none;
+    stroke: #FD6F00;
+    stroke-linecap: round;
+    stroke-linejoin:round ;
+  }
+
+  .custom-linear-color{
+    @apply bg-gradient-to-r from-[#FD6F00] to-[#E46400]
+  }
+
+  .text-linear{
+  @apply bg-gradient-to-r from-[#FD6F00] to-[#E46400]
+  }
+
+  .queryBtnFocus{
+    @apply cursor-pointer bg-gradient-to-r from-[#FD6F00] to-[#E46400] px-10 py-[14px] rounded-[8px]
+  }
+  .queryBtn{
+    @apply bg-white/8 px-10 py-[14px] rounded-[8px] cursor-pointer
+  }
+
+
+
 }
