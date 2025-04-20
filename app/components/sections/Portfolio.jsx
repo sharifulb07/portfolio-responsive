@@ -29,7 +29,7 @@ export default function Portfolio() {
   return (
     <div className="flex  flex-col justify-center items-center px-[80px]">
       <div className="portfolio-top mb-[70px] flex flex-col  justify-center items-center">
-        <div className="mb-[40px]">
+        <div className="">
           <Title title={"Portfolio"} />
         </div>
         <div className="flex justify-center items-center flex-wrap gap-6">

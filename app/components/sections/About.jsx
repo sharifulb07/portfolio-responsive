@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "../Button";
 import { HiOutlineDownload } from "react-icons/hi";
 
+
 import { Lato } from "next/font/google";
 
 const lato = Lato({
@@ -13,7 +14,8 @@ const lato = Lato({
 
 export default function About() {
   return (
-    <div className=" md:top-0 flex justify-center flex-col  w-full text-orange-600 text-center px-[26px] gap-[24px] md:px-20">
+    <div 
+     className=" md:top-0 flex justify-center flex-col  w-full text-orange-600 text-center px-[26px] gap-[24px] md:px-20">
       <Title
         title={"About Me"}
         desc="User Interface and User Experience and Also video editing "
